@@ -1,0 +1,21 @@
+group 'jp.hashiwa.expr'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+apply plugin: 'antlr'
+
+//sourceCompatibility = 1.5
+
+mainClassName = "jp.hashiwa.expr.Main"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    antlr 'org.antlr:antlr4:4.5.2-1'
+}
+
+generateGrammarSource {
+    outputDirectory = new File("src/main/java/jp/hashiwa/antlr4")
+}

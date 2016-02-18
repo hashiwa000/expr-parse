@@ -9,9 +9,6 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 /**
  * Created by Hashiwa on 2016/02/18.
- *
- * https://gist.github.com/mattmcd/5425206
- * http://www.antlr.org/
  */
 public class Main {
   public static void main(String[] args) throws Exception {

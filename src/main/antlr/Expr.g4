@@ -5,11 +5,17 @@ grammar Expr;
 package jp.hashiwa.antlr4;
 }
 
-prog:	(expr NEWLINE)* ;
-expr:	expr ('*'|'/') expr
-    |	expr ('+'|'-') expr
-    |	INT
-    |	'(' expr ')'
-    ;
+prog  : expr (NEWLINE expr)*
+      ;
+expr  : term (('+'|'-') term)*
+      ;
+term  : unary (('*'|'/') unary)*
+      ;
+unary : factor
+      | '-' factor
+      ;
+factor: INT
+      | '(' expr ')'
+      ;
 NEWLINE : [\r\n]+ ;
 INT     : [0-9]+ ;

@@ -29,4 +29,34 @@ public interface ExprListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExpr(ExprParser.ExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ExprParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void enterTerm(ExprParser.TermContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ExprParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void exitTerm(ExprParser.TermContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ExprParser#unary}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnary(ExprParser.UnaryContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ExprParser#unary}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnary(ExprParser.UnaryContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ExprParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterFactor(ExprParser.FactorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ExprParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitFactor(ExprParser.FactorContext ctx);
 }

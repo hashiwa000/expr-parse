@@ -23,10 +23,8 @@ public class ExprCalculator {
     walker.walk(new ExprWalker(), tree);
 
     ExprCalculator calculator = new ExprCalculator();
-    System.out.println("Result : " + calculator.calc(tree));
+    System.out.println("Result : " + tree.getText().replace("\r\n", "") + " = " + calculator.calc(tree));
   }
-
-
 
   private int calc(ParseTree tree) {
     if (DEBUG) System.out.println("DEBUG 0 " + tree.getText());
